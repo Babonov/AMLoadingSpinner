@@ -22,6 +22,8 @@ typedef enum : NSUInteger {
     AMLoadingSpinnerBackgroundTypeCustomView
 } AMLoadingSpinnerBackgroundType;
 
+#define AMLoadingSpinnerDismissedNotification @"AMLoadingSpinnerDismissedNotification"
+
 @interface AMLoadingSpinner : UIView
 
 /**
@@ -143,7 +145,7 @@ typedef enum : NSUInteger {
 /**
  * Check spinner status (showing or not)
  */
-+(BOOL) isShowing;
++(BOOL) isSpinnerShowing;
 
 
 @end

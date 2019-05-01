@@ -49,8 +49,8 @@
 
 #pragma mark - Getters
 
-+(BOOL) isShowing {
-    return self.isShowing;
++(BOOL) isSpinnerShowing {
+    return [[AMLoadingSpinner sharedManager] isShowing];
 }
 
 #pragma mark - Singleton (Full screen spinner)
@@ -194,6 +194,7 @@
     } else {
         if ([[UIApplication sharedApplication].keyWindow.subviews containsObject:[AMLoadingSpinner sharedManager]]) {
             [[AMLoadingSpinner sharedManager] removeFromSuperview];
+            [[NSNotificationCenter defaultCenter] postNotificationName:AMLoadingSpinnerDismissedNotification object:nil];
         }
     }
 }
