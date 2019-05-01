@@ -47,6 +47,12 @@
     return sharedInstance;
 }
 
+#pragma mark - Getters
+
++(BOOL) isShowing {
+    return self.isShowing;
+}
+
 #pragma mark - Singleton (Full screen spinner)
 
 #pragma mark - Default values

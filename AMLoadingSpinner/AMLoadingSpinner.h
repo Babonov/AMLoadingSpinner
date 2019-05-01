@@ -140,5 +140,10 @@ typedef enum : NSUInteger {
  */
 +(void) dismissWithDelay:(NSTimeInterval)delay;
 
+/**
+ * Check spinner status (showing or not)
+ */
++(BOOL) isShowing;
+
 
 @end
